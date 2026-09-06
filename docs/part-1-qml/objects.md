@@ -145,10 +145,12 @@ Window {
       onClicked: {
         box.color = "#ff6b6b"
         label.text = "Clicked!"
+        clickTimer.start()
       }
     }
 
     Timer {
+      id: clickTimer
       interval: 1000
       running: false
       onTriggered: {
